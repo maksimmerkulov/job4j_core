@@ -1,7 +1,7 @@
 package ru.job4j.basics.scheme;
 
 /*
-  Ниже приведен код в котором забыли закрыть блок класса. Поправьте ошибку.
+  В методе main забыли закрывающую скобку. Поправь код приведенный ниже.
 */
 public class HelloWorld {
     public static void main(String[] args) {
