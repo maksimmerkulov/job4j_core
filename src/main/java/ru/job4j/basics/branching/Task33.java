@@ -1,25 +1,41 @@
 package ru.job4j.basics.branching;
 
 /*
-  Ниже представлен метод numSquare(int number), который принимает целое число.
+  Ниже представлен метод evenAmount(int number), который принимает целое
+  положительное трехзначное число.
 
-  Задание: Написать код, который выводит в консоль квадрат этого числа, если оно
-  отрицательное, иначе вывести "Ошибка".
+  Задание: Написать код, который высчитывает количество четных цифр во входящем
+  трехзначном числе, и выводит результат в консоль.
 
-  Например, для числа 2 вывод будет:
+  Переменная counter - это счетчик наших четных цифр.
 
-  Ошибка
+  Например, для числа 650 вывод должен быть:
+
+  2
+
+  Примечание: в вычислениях нужно пользоваться операторами "вычисление остатка"
+  (%), "вычисление частного"(/) и базовыми арифметическими операциями.
 */
 public class Task33 {
-    public static void numSquare(int number) {
-        if (number < 0) {
-            System.out.println(number * number);
-        } else {
-            System.out.println("Ошибка");
+    public static void evenAmount(int number) {
+        int num1, num2, num3, counter = 0;
+        num1 = number / 100;
+        num2 = (number / 10) % 10;
+        num3 = number % 10;
+
+        if (num1 % 2 == 0) {
+            counter++;
         }
+        if (num2 % 2 == 0) {
+            counter++;
+        }
+        if (num3 % 2 == 0) {
+            counter++;
+        }
+        System.out.println(counter);
     }
 
     public static void main(String[] args) {
-        numSquare(2);
+        evenAmount(650);
     }
 }
