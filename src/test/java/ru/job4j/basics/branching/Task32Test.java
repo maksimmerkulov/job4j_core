@@ -12,29 +12,47 @@ public class Task32Test {
     public String ln = System.lineSeparator();
 
     @Test
-    public void when1And3Then2() {
+    public void when36Then1() {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
-        Task32.calculate(1, 3);
+        Task32.evenAmount(36);
+        String expected = "1" + ln;
+        assertThat(out.toString(), is(expected));
+    }
+
+    @Test
+    public void when64Then2() {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(out));
+        Task32.evenAmount(64);
         String expected = "2" + ln;
         assertThat(out.toString(), is(expected));
     }
 
     @Test
-    public void when5And2Then3() {
+    public void when35Then0() {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
-        Task32.calculate(5, 2);
-        String expected = "3" + ln;
+        Task32.evenAmount(35);
+        String expected = "0" + ln;
         assertThat(out.toString(), is(expected));
     }
 
     @Test
-    public void when3And3Then9() {
+    public void when67Then1() {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
-        Task32.calculate(3, 3);
-        String expected = "9" + ln;
+        Task32.evenAmount(67);
+        String expected = "1" + ln;
+        assertThat(out.toString(), is(expected));
+    }
+
+    @Test
+    public void when50Then1() {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(out));
+        Task32.evenAmount(50);
+        String expected = "1" + ln;
         assertThat(out.toString(), is(expected));
     }
 }

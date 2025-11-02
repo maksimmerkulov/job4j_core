@@ -1,29 +1,37 @@
 package ru.job4j.basics.branching;
 
 /*
-  Ниже представлен метод calculate(int num1, int num2), который принимает 2
-  целых положительных числа.
+  Ниже представлен метод evenAmount(int number), который принимает целое
+  положительное двузначное число.
 
-  Задание: Написать код, который выводит в консоль разницу между первым и вторым
-  числом, если первое больше второго, разницу между вторым и первым числом, если
-  второе больше первого или произведение этих чисел, если они равны.
+  Задание: Написать код, который высчитывает количество четных цифр во входящем
+  двузначном числе, и выводит результат в консоль.
 
-  Например, для чисел 2 и 5 вывод будет:
+  Переменная counter - это счетчик наших четных цифр.
 
-  3
+  Например, для числа 64 вывод должен быть:
+
+  2
+
+  Примечание: в вычислениях нужно пользоваться операторами "вычисление остатка"
+  (%), "вычисление частного"(/) и базовыми арифметическими операциями.
 */
 public class Task32 {
-    public static void calculate(int num1, int num2) {
-        if (num1 > num2) {
-            System.out.println(num1 - num2);
-        } else if (num2 > num1) {
-            System.out.println(num2 - num1);
-        } else {
-            System.out.println(num1 * num2);
+    public static void evenAmount(int number) {
+        int num1, num2, counter = 0;
+        num1 = number / 10;
+        num2 = number % 10;
+
+        if (num1 % 2 == 0) {
+            counter++;
         }
+        if (num2 % 2 == 0) {
+            counter++;
+        }
+        System.out.println(counter);
     }
 
     public static void main(String[] args) {
-        calculate(2, 5);
+        evenAmount(64);
     }
 }
