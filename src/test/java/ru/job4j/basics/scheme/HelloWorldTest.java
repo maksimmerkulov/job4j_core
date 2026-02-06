@@ -18,7 +18,7 @@ import static org.junit.Assert.assertThat;
  * с учетом системного переноса строки.</p>
  *
  * @author Maksim Merkulov
- * @version 1.6
+ * @version 1.7
  */
 public class HelloWorldTest {
 
