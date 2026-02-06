@@ -10,7 +10,7 @@ package ru.job4j.basics.scheme;
  * на стандартный вывод.</p>
  *
  * @author Maksim Merkulov
- * @version 1.3
+ * @version 1.4
  */
 public class HelloWorld {
 
