@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Tests for the {@link HelloWorld} class.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 class HelloWorldTest {
 
