@@ -9,7 +9,7 @@ package ru.job4j.basics.scheme;
  * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
+ * @version 1.2
  */
 public class HelloWorld {
 
